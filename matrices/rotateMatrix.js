@@ -1,3 +1,5 @@
+const { displayMatrix } = require('./helpers');
+
 //okay so you get fed a matrix of integers between 1 and 500
 //and a string with up to 3 directions on it, either R or L.
 //if L, rotate 90 degrees counterclockwise. if R, 90 degrees clockwise.
@@ -94,17 +96,17 @@ const test1 = [
   [1, 2],
   [3, 4]
 ];
-console.log(`Test result:\n\t${rotateMatrix(test1, 'RLR')}`); //[3, 1]
-                                                              //[4, 2]
+console.log(`Test result:\n${displayMatrix(rotateMatrix(test1, 'RLR'))}`); //[3, 1]
+                                                                             //[4, 2]
 
 const test2 = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
 ];
-console.log(`Test 2 Result:\n\t${rotateMatrix(test2, 'RLR')}`); //[7, 4, 1]
-                                                                //[8, 5, 2]
-                                                                //[9, 6, 3]
+console.log(`Test 2 Result:\n${displayMatrix(rotateMatrix(test2, 'RLR'))}`); //[7, 4, 1]
+                                                                               //[8, 5, 2]
+                                                                               //[9, 6, 3]
 
 const test3 = [
   [1, 2, 3, 4],
@@ -112,7 +114,7 @@ const test3 = [
   [9, 10, 11, 12],
   [13, 14, 15, 16]
 ]
-console.log(`Test 3 Result:\n\t${rotateMatrix(test3, 'RLR')}`); //[13, 9, 5, 1]
-                                                                //[14, 10, 6, 2]
-                                                                //[15, 11, 7, 3]
-                                                                //[16, 12, 8, 4]
+console.log(`Test 3 Result:\n${displayMatrix(rotateMatrix(test3, 'RLR'))}`); //[13, 9, 5, 1]
+                                                                              //[14, 10, 6, 2]
+                                                                              //[15, 11, 7, 3]
+                                                                              //[16, 12, 8, 4]
